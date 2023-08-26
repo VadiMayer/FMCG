@@ -1,3 +1,5 @@
+package model;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,17 +9,22 @@ public class Actual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "date")
     private String date;
 
+    @Column(name = "materialNo")
     private String materialNo;
 
+    @Column(name = "ch3ShipToCode")
     private String ch3ShipToCode;
 
+    @Column(name = "chain")
     private String chain;
 
+    @Column(name = "volume")
     private Integer volume;
 
+    @Column(name = "actualSalesValue")
     private Double actualSalesValue;
 
     @Transient
